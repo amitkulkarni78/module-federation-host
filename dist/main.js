@@ -44,15 +44,15 @@ module.exports = new Promise((resolve, reject) => {
 /***/ }),
 
 /***/ "webpack/container/reference/remote":
-/*!**************************************************************!*\
-  !*** external "remote@http://localhost:3001/remoteEntry.js" ***!
-  \**************************************************************/
+/*!*************************************************************************************!*\
+  !*** external "remote@https://d2rlgquuf6ymrx.cloudfront.net/remote/remoteEntry.js" ***!
+  \*************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof remote !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:3001/remoteEntry.js", (event) => {
+	__webpack_require__.l("https://d2rlgquuf6ymrx.cloudfront.net/remote/remoteEntry.js", (event) => {
 		if(typeof remote !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
