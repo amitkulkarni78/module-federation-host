@@ -40,7 +40,8 @@ module.exports = {
             name: 'host',
             remotes: {
                 remote: 'remote@http://localhost:3001/remoteEntry.js',
-                products: 'products@https://d2rlgquuf6ymrx.cloudfront.net/products/remoteEntry.js'
+                products: 'products@http://localhost:3002/remoteEntry.js',
+                filter: 'products@http://localhost:3002/remoteEntry.js'
             },
             shared: {
                 react: { singleton: true, requiredVersion: '^17.0.2' },

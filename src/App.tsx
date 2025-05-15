@@ -19,6 +19,7 @@ type RootState = ReturnType<typeof store.getState>;
 
 const RemoteApp = React.lazy(() => import('remote/App'));
 const ProductsApp = React.lazy(() => import('products/Products'));
+
 const drawerWidth = 240;
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean;
@@ -125,7 +126,7 @@ function App() {
       <Box sx={{display: 'flex'}}>
       
           
-        <AppBar position="fixed" open={open}>
+        <AppBar position="fixed" open={open} sx={{ zIndex: 0}}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between'}}>
           <IconButton
             color="inherit"
@@ -194,39 +195,58 @@ function App() {
             <ListItem> Home </ListItem>
           </List>
         </Drawer>
-         <Main open={open}>
+         <Main open={open} style={{ justifyContent: "center", width: "100%", marginTop: '50px'}}>
          <DrawerHeader />
-         <div >
-        Count - {count1}
+         <Container > 
+           <Grid direction={"row"}>
+
+            <Grid columns={1}>
+            <div style={{ display: "flex", flexDirection: "row", width: "100%"}}>
+      {/*   Count - {count1}
         <Button 
           onClick={() => dispatch(setCounter(count1 + 1))} 
           variant="contained"
           aria-label="Increment counter"
         > 
           click me 
-        </Button>      
-        </div>
-        <div className='bg-red-300'>
+        </Button> */}
+        <div className='bg-red-300' >
         <Suspense fallback={<div>Loading Remote App...</div>}>
         <RemoteApp />
       </Suspense>
        
         </div>
-        <div >
+       
+        </div>
+            </Grid>
+            <Grid columns={1}>
+            <Suspense fallback={<div>Loading Remote App...</div>}>
+       {/*  <ProductsFilter /> */}
+       </Suspense>
+            </Grid>
+            <Grid columns={1}>
+            
+            <div >
         <Suspense fallback={<div>Loading Remote App...</div>}>
         <ProductsApp />
        </Suspense>
         </div>
+ 
+            </Grid>
+           </Grid>
+         </Container>
+         
          </Main>
 
          <Drawer    
          sx={{
           width: drawerWidth,
+          position: 'fixed',
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-          },
+          }
         }}
         variant="persistent"
         anchor="right"
