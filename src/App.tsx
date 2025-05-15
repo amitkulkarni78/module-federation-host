@@ -216,7 +216,6 @@ function App() {
       </Suspense>
        
         </div>
-       
         </div>
             </Grid>
             <Grid columns={1}>
