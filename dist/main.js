@@ -16,7 +16,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\nPromise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_noSo-01eefb\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_bootstrap_tsx-webpack_sharing_consume_default_react-dom_react-dom\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.tsx\"));\r\n\r\n\n\n//# sourceURL=webpack://host/./src/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\nPromise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_noSo-27063c\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_bootstrap_tsx-webpack_sharing_consume_default_react-dom_react-dom\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.tsx\"));\r\n\r\n\n\n//# sourceURL=webpack://host/./src/index.tsx?");
 
 /***/ }),
 
@@ -44,15 +44,15 @@ module.exports = new Promise((resolve, reject) => {
 /***/ }),
 
 /***/ "webpack/container/reference/remote":
-/*!**************************************************************!*\
-  !*** external "remote@http://localhost:3001/remoteEntry.js" ***!
-  \**************************************************************/
+/*!*************************************************************************************!*\
+  !*** external "remote@https://d2rlgquuf6ymrx.cloudfront.net/remote/remoteEntry.js" ***!
+  \*************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof remote !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:3001/remoteEntry.js", (event) => {
+	__webpack_require__.l("https://d2rlgquuf6ymrx.cloudfront.net/remote/remoteEntry.js", (event) => {
 		if(typeof remote !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
